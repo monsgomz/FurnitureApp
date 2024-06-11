@@ -11,6 +11,9 @@
 		C256449E2C18E1650099B916 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C256449D2C18E1650099B916 /* ContentView.swift */; };
 		C25644A02C18E1660099B916 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C256449F2C18E1660099B916 /* Assets.xcassets */; };
 		C25644A32C18E1660099B916 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C25644A22C18E1660099B916 /* Preview Assets.xcassets */; };
+		C25644B22C18F5EA0099B916 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644AF2C18F2640099B916 /* PlusJakartaSans-Regular.ttf */; };
+		C25644B32C18F5EA0099B916 /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644B12C18F2780099B916 /* PlusJakartaSans-Light.ttf */; };
+		C25644B42C18F5EA0099B916 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644B02C18F26E0099B916 /* PlusJakartaSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,11 @@
 		C256449D2C18E1650099B916 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C256449F2C18E1660099B916 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C25644A22C18E1660099B916 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C25644AD2C18E55D0099B916 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C25644AF2C18F2640099B916 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
+		C25644B02C18F26E0099B916 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
+		C25644B12C18F2780099B916 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
+		C25644B52C18F62C0099B916 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,9 @@
 		C256449A2C18E1650099B916 /* FurnitureApp */ = {
 			isa = PBXGroup;
 			children = (
+				C25644AE2C18EC520099B916 /* Views */,
+				C25644AD2C18E55D0099B916 /* Info.plist */,
+				C25644A92C18E3CC0099B916 /* Fonts */,
 				C256449B2C18E1650099B916 /* FurnitureAppApp.swift */,
 				C256449D2C18E1650099B916 /* ContentView.swift */,
 				C256449F2C18E1660099B916 /* Assets.xcassets */,
@@ -65,6 +76,24 @@
 				C25644A22C18E1660099B916 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C25644A92C18E3CC0099B916 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C25644AF2C18F2640099B916 /* PlusJakartaSans-Regular.ttf */,
+				C25644B12C18F2780099B916 /* PlusJakartaSans-Light.ttf */,
+				C25644B02C18F26E0099B916 /* PlusJakartaSans-Bold.ttf */,
+				C25644B52C18F62C0099B916 /* PlusJakartaSans-ExtraLight.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C25644AE2C18EC520099B916 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25644A32C18E1660099B916 /* Preview Assets.xcassets in Resources */,
+				C25644B22C18F5EA0099B916 /* PlusJakartaSans-Regular.ttf in Resources */,
+				C25644B32C18F5EA0099B916 /* PlusJakartaSans-Light.ttf in Resources */,
+				C25644B42C18F5EA0099B916 /* PlusJakartaSans-Bold.ttf in Resources */,
 				C25644A02C18E1660099B916 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +307,7 @@
 				DEVELOPMENT_TEAM = Z28MDHV9K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FurnitureApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +337,7 @@
 				DEVELOPMENT_TEAM = Z28MDHV9K2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FurnitureApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
