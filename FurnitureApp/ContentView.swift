@@ -8,42 +8,40 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-		NavigationStack {
-			VStack {
-				HStack{
-					Image(systemName: "line.3.horizontal.circle")
-						.resizable()
-						.foregroundStyle(.accent)
-						.scaledToFit()
-						.frame(height: 30)
-					Spacer()
-					Image(systemName: "person.circle")
-						.resizable()
-						.foregroundStyle(.accent)
-						.scaledToFit()
-						.frame(height: 30)
+	
+	
+	var body: some View {
+		
+		TabView{
+			
+			HomeView()
+				.tabItem {
+					Label("Home", systemImage: "house")
 				}
-				.padding(.horizontal)
 				
-				Text("Find the \nBest ")
-					.font(.custom("Plus Jakarta Sans ExtraLight", size: 25))
-					.foregroundStyle(.accent)
-				+ Text("Furniture!")
-					.font(.custom("Plus Jakarta Sans Bold", size: 25))
-					.foregroundStyle(.accent)
-					
-				
-					
-					
-				
-			   
-			}
-			.padding()
+			FavView()
+				.tabItem {
+					Label("Favorite", systemImage: "heart.fill")
+				}
+			
+			ShopView()
+				.tabItem {
+					Label("Shop", systemImage: "cart")
+				}
+			
+			ProfileView()
+				.tabItem {
+					Label("Profile", systemImage: "person.circle")
+				}
 		}
-    }
+		
+		
+	}
+	
 }
 
 #Preview {
-    ContentView()
+	ContentView()
+		.environment(FurnitureModelView())
 }
+

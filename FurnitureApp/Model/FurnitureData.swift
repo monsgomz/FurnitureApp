@@ -7,8 +7,14 @@
 
 import Foundation
 
-struct FurnitureData: Codable{
+// MARK: - Furniture
+struct FurnitureData: Codable {
 	var furnitureStore: FurnitureStore
+	
+	enum CodingKeys: String, CodingKey {
+		case furnitureStore = "furniture_store"
+	}
+	
 	
 	// MARK: - FurnitureStore
 	struct FurnitureStore: Codable {
@@ -16,23 +22,18 @@ struct FurnitureData: Codable{
 	}
 	
 	// MARK: - Item
-	struct Item: Codable, Identifiable {
+	struct Item: Codable {
 		var id: Int
 		var name, description: String
 		var price: Double
 		var color: String
 		var size: Size
-		var category: String
+		var category: Categories
 		var dimensions: Dimensions
 		var material: String
 		
-		enum Size: String, CaseIterable, Codable  {
-			case grande = "Grande"
-			case mediano = "Mediano"
-			case pequeño = "Pequeño"
-		}
-		
-		enum Category: String, CaseIterable, Codable{
+		enum Categories: String, CaseIterable, Codable {
+			case all = "All"
 			case sala = "Sala"
 			case comedor = "Comedor"
 			case oficina = "Oficina"
@@ -41,12 +42,22 @@ struct FurnitureData: Codable{
 			case cocina = "Cocina"
 			case decoracion = "Decoración"
 		}
+		
+		enum Size: String, Codable {
+			case grande = "Grande"
+			case mediano = "Mediano"
+			case pequeño = "Pequeño"
+		}
+		
+		
+		
 	}
 	
 	// MARK: - Dimensions
 	struct Dimensions: Codable {
 		var width, height, depth: String
 	}
+	
 	
 	
 	

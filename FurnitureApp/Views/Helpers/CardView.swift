@@ -17,7 +17,8 @@ struct CardView: View {
 				Image("mueble1")
 					.resizable()
 					.scaledToFit()
-					.clipShape(RoundedRectangle(cornerRadius: 25.0))
+					.frame(width:260, height: 250, alignment: .center)
+					.clipShape(RoundedRectangle(cornerRadius: 20.0))
 					.shadow(
 						color: Color(.sRGBLinear, white: 0, opacity: 0.23),
 						radius: CGFloat(15),
@@ -31,25 +32,26 @@ struct CardView: View {
 					.padding()
 				
 			}
-			.padding(.bottom)
+			.padding(5)
 			
 			Text("Nombre del mueble")
 				.font(.custom("Plus Jakarta Sans Bold", size: 18))
-				.padding([.leading, .bottom], 12)
+				.padding(.leading, 20)
+				.padding(.bottom, 10)
 			
 			//bottom
 			HStack {
 				StarsView()
+					.padding(.leading, 10)
 				Spacer()
 				Text("$000.00")
-					.font(.custom("Plus Jakarta Sans Bold", size: 16))
+					.font(.custom("Plus Jakarta Sans Regular", size: 16))
 			}
-			.padding([.bottom, .horizontal], 12)
+			.padding([.bottom, .leading], 12)
 		}
 		.background(Color.white)
-		.overlay(RoundedRectangle(cornerRadius: 25.0)
-			.stroke(.blue, lineWidth: 4)
-		)
+		.frame(width: 280, height: 350, alignment: .center)
+		.clipShape(RoundedRectangle(cornerRadius: 25.0))
 		.padding()
 		
     }

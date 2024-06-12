@@ -7,18 +7,20 @@
 
 import Foundation
 
-class furnitureModelView {
+@Observable
+class FurnitureModelView {
 	
-	var muebles: [FurnitureData.Item] = load("muebles.json").first?.furnitureStore.items ?? [] //cargamos el archivo
+	//MARK: items es un array de elementos de tipo FurnitureData.Item, que representa la lista de muebles cargados
+	var muebles: [FurnitureData.Item] = load("muebles").furnitureStore.items
 	
 	//Diccionario de categorias
 	var categories: [String: [FurnitureData.Item]] {
-		Dictionary(grouping: muebles, by: { $0.category} //el elemento lee su categoria
+		Dictionary(grouping: muebles, by: { $0.category.rawValue} //el elemento lee su categoria
 		)
 	}
 }
 
-func load(_ filename: String) -> [FurnitureData] {
+func load(_ filename: String) -> FurnitureData {
 	let data: Data
 	
 	guard let file = Bundle.main.url(forResource: filename, withExtension: "json")
@@ -37,7 +39,7 @@ func load(_ filename: String) -> [FurnitureData] {
 	do {
 		let decoder = JSONDecoder()
 		
-		return try decoder.decode([FurnitureData].self, from: data)
+		return try decoder.decode(FurnitureData.self, from: data)
 	} catch {
 		fatalError("Couldn't parse \(filename) as \([FurnitureData].self):\n\(error)")
 	}
