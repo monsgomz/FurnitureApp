@@ -14,6 +14,12 @@
 		C25644B22C18F5EA0099B916 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644AF2C18F2640099B916 /* PlusJakartaSans-Regular.ttf */; };
 		C25644B32C18F5EA0099B916 /* PlusJakartaSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644B12C18F2780099B916 /* PlusJakartaSans-Light.ttf */; };
 		C25644B42C18F5EA0099B916 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644B02C18F26E0099B916 /* PlusJakartaSans-Bold.ttf */; };
+		C25644B72C18F7FA0099B916 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644B62C18F7FA0099B916 /* CardView.swift */; };
+		C25644BA2C18FCD40099B916 /* StarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644B92C18FCD40099B916 /* StarsView.swift */; };
+		C25644BB2C18FE140099B916 /* PlusJakartaSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25644B52C18F62C0099B916 /* PlusJakartaSans-ExtraLight.ttf */; };
+		C25644BF2C1934090099B916 /* muebles.json in Resources */ = {isa = PBXBuildFile; fileRef = C25644BE2C1934090099B916 /* muebles.json */; };
+		C25644C12C1935D10099B916 /* FurnitureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644C02C1935D10099B916 /* FurnitureData.swift */; };
+		C25644C42C1938F90099B916 /* FurnitureModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644C32C1938F90099B916 /* FurnitureModelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,11 @@
 		C25644B02C18F26E0099B916 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		C25644B12C18F2780099B916 /* PlusJakartaSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Light.ttf"; sourceTree = "<group>"; };
 		C25644B52C18F62C0099B916 /* PlusJakartaSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C25644B62C18F7FA0099B916 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C25644B92C18FCD40099B916 /* StarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsView.swift; sourceTree = "<group>"; };
+		C25644BE2C1934090099B916 /* muebles.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = muebles.json; sourceTree = "<group>"; };
+		C25644C02C1935D10099B916 /* FurnitureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureData.swift; sourceTree = "<group>"; };
+		C25644C32C1938F90099B916 /* FurnitureModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,9 @@
 		C256449A2C18E1650099B916 /* FurnitureApp */ = {
 			isa = PBXGroup;
 			children = (
+				C25644C22C1938B70099B916 /* ModelView */,
+				C25644BD2C1933BF0099B916 /* Resource */,
+				C25644BC2C1933B20099B916 /* Model */,
 				C25644AE2C18EC520099B916 /* Views */,
 				C25644AD2C18E55D0099B916 /* Info.plist */,
 				C25644A92C18E3CC0099B916 /* Fonts */,
@@ -92,8 +106,42 @@
 		C25644AE2C18EC520099B916 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C25644B82C18FCC80099B916 /* Helpers */,
+				C25644B62C18F7FA0099B916 /* CardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C25644B82C18FCC80099B916 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C25644B92C18FCD40099B916 /* StarsView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C25644BC2C1933B20099B916 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C25644C02C1935D10099B916 /* FurnitureData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C25644BD2C1933BF0099B916 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C25644BE2C1934090099B916 /* muebles.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C25644C22C1938B70099B916 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				C25644C32C1938F90099B916 /* FurnitureModelView.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +206,8 @@
 				C25644B22C18F5EA0099B916 /* PlusJakartaSans-Regular.ttf in Resources */,
 				C25644B32C18F5EA0099B916 /* PlusJakartaSans-Light.ttf in Resources */,
 				C25644B42C18F5EA0099B916 /* PlusJakartaSans-Bold.ttf in Resources */,
+				C25644BB2C18FE140099B916 /* PlusJakartaSans-ExtraLight.ttf in Resources */,
+				C25644BF2C1934090099B916 /* muebles.json in Resources */,
 				C25644A02C18E1660099B916 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C256449E2C18E1650099B916 /* ContentView.swift in Sources */,
+				C25644C42C1938F90099B916 /* FurnitureModelView.swift in Sources */,
+				C25644B72C18F7FA0099B916 /* CardView.swift in Sources */,
+				C25644C12C1935D10099B916 /* FurnitureData.swift in Sources */,
+				C25644BA2C18FCD40099B916 /* StarsView.swift in Sources */,
 				C256449C2C18E1650099B916 /* FurnitureAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,232 @@
+{
+	"furniture_store": {
+		"items": [
+			{
+				"id": 1,
+				"name": "Sofá Moderno",
+				"description": "Sofá de tres plazas con diseño moderno y cojines cómodos.",
+				"price": 299.99,
+				"color": "Gris",
+				"size": "Grande",
+				"category": "Sala",
+				"dimensions": {
+					"width": "200cm",
+					"height": "85cm",
+					"depth": "90cm"
+				},
+				"material": "Tela y madera"
+			},
+			{
+				"id": 2,
+				"name": "Mesa de Comedor",
+				"description": "Mesa de comedor de madera maciza con capacidad para seis personas.",
+				"price": 499.99,
+				"color": "Marrón",
+				"size": "Grande",
+				"category": "Comedor",
+				"dimensions": {
+					"width": "180cm",
+					"height": "75cm",
+					"depth": "90cm"
+				},
+				"material": "Madera de roble"
+			},
+			{
+				"id": 3,
+				"name": "Silla de Oficina",
+				"description": "Silla ergonómica para oficina con soporte lumbar ajustable.",
+				"price": 149.99,
+				"color": "Negro",
+				"size": "Mediano",
+				"category": "Oficina",
+				"dimensions": {
+					"width": "65cm",
+					"height": "120cm",
+					"depth": "70cm"
+				},
+				"material": "Cuero sintético y metal"
+			},
+			{
+				"id": 4,
+				"name": "Cama King Size",
+				"description": "Cama king size con cabecera acolchada y estructura de madera.",
+				"price": 799.99,
+				"color": "Blanco",
+				"size": "Grande",
+				"category": "Dormitorio",
+				"dimensions": {
+					"width": "200cm",
+					"height": "120cm",
+					"depth": "220cm"
+				},
+				"material": "Madera y tela"
+			},
+			{
+				"id": 5,
+				"name": "Lámpara de Pie",
+				"description": "Lámpara de pie con diseño minimalista y luz regulable.",
+				"price": 89.99,
+				"color": "Negro",
+				"size": "Pequeño",
+				"category": "Sala",
+				"dimensions": {
+					"width": "30cm",
+					"height": "180cm",
+					"depth": "30cm"
+				},
+				"material": "Metal y tela"
+			},
+			{
+				"id": 6,
+				"name": "Estantería de Pared",
+				"description": "Estantería flotante de pared con cinco estantes.",
+				"price": 199.99,
+				"color": "Blanco",
+				"size": "Mediano",
+				"category": "Almacenamiento",
+				"dimensions": {
+					"width": "100cm",
+					"height": "180cm",
+					"depth": "30cm"
+				},
+				"material": "Madera y metal"
+			},
+			{
+				"id": 7,
+				"name": "Mesa Auxiliar",
+				"description": "Mesa auxiliar redonda con tapa de vidrio templado.",
+				"price": 59.99,
+				"color": "Transparente",
+				"size": "Pequeño",
+				"category": "Sala",
+				"dimensions": {
+					"width": "50cm",
+					"height": "50cm",
+					"depth": "50cm"
+				},
+				"material": "Vidrio y metal"
+			},
+			{
+				"id": 8,
+				"name": "Silla de Comedor",
+				"description": "Silla de comedor acolchada con patas de madera.",
+				"price": 79.99,
+				"color": "Azul",
+				"size": "Mediano",
+				"category": "Comedor",
+				"dimensions": {
+					"width": "45cm",
+					"height": "90cm",
+					"depth": "55cm"
+				},
+				"material": "Tela y madera"
+			},
+			{
+				"id": 9,
+				"name": "Escritorio",
+				"description": "Escritorio de oficina con cajones y espacio para almacenamiento.",
+				"price": 249.99,
+				"color": "Marrón",
+				"size": "Grande",
+				"category": "Oficina",
+				"dimensions": {
+					"width": "150cm",
+					"height": "75cm",
+					"depth": "70cm"
+				},
+				"material": "Madera y metal"
+			},
+			{
+				"id": 10,
+				"name": "Sillón Relax",
+				"description": "Sillón reclinable con función de masaje y reposapiés.",
+				"price": 399.99,
+				"color": "Marrón",
+				"size": "Grande",
+				"category": "Sala",
+				"dimensions": {
+					"width": "85cm",
+					"height": "110cm",
+					"depth": "90cm"
+				},
+				"material": "Cuero y metal"
+			},
+			{
+				"id": 11,
+				"name": "Mesa de Centro",
+				"description": "Mesa de centro con diseño industrial y espacio de almacenamiento.",
+				"price": 129.99,
+				"color": "Negro",
+				"size": "Mediano",
+				"category": "Sala",
+				"dimensions": {
+					"width": "100cm",
+					"height": "45cm",
+					"depth": "60cm"
+				},
+				"material": "Madera y metal"
+			},
+			{
+				"id": 12,
+				"name": "Armario",
+				"description": "Armario de dos puertas con espejo integrado.",
+				"price": 599.99,
+				"color": "Blanco",
+				"size": "Grande",
+				"category": "Dormitorio",
+				"dimensions": {
+					"width": "120cm",
+					"height": "200cm",
+					"depth": "60cm"
+				},
+				"material": "Madera y espejo"
+			},
+			{
+				"id": 13,
+				"name": "Cajonera",
+				"description": "Cajonera de cinco cajones con diseño clásico.",
+				"price": 199.99,
+				"color": "Marrón",
+				"size": "Mediano",
+				"category": "Dormitorio",
+				"dimensions": {
+					"width": "80cm",
+					"height": "120cm",
+					"depth": "45cm"
+				},
+				"material": "Madera"
+			},
+			{
+				"id": 14,
+				"name": "Banco de Bar",
+				"description": "Banco de bar ajustable con asiento acolchado.",
+				"price": 99.99,
+				"color": "Rojo",
+				"size": "Mediano",
+				"category": "Cocina",
+				"dimensions": {
+					"width": "40cm",
+					"height": "100cm",
+					"depth": "40cm"
+				},
+				"material": "Cuero sintético y metal"
+			},
+			{
+				"id": 15,
+				"name": "Espejo de Pared",
+				"description": "Espejo de pared con marco decorativo de madera.",
+				"price": 89.99,
+				"color": "Marrón",
+				"size": "Mediano",
+				"category": "Decoración",
+				"dimensions": {
+					"width": "70cm",
+					"height": "120cm",
+					"depth": "3cm"
+				},
+				"material": "Madera y vidrio"
+			}
+		]
+	}
+}
+
