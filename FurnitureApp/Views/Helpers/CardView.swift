@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct CardView: View {
+	var muebleInfo : FurnitureData.Item
 	
-    var body: some View {
+	var imageMueble: Int = Int.random(in: 1...4)
+	
+	var body: some View {
 		
 		VStack(alignment: .leading, spacing: 0) {
 			
 			ZStack (alignment: .topTrailing){
-				Image("mueble1")
+				Image("mueble\(imageMueble)")
 					.resizable()
 					.scaledToFit()
-					.frame(width:260, height: 250, alignment: .center)
+					.frame(width:260, height: 240, alignment: .center)
 					.clipShape(RoundedRectangle(cornerRadius: 20.0))
 					.shadow(
 						color: Color(.sRGBLinear, white: 0, opacity: 0.23),
@@ -25,38 +28,57 @@ struct CardView: View {
 						x: CGFloat(0), y: CGFloat(0))
 					.padding()
 				
-					Image(systemName: "heart")
+				Image(systemName: "heart")
 					.resizable()
 					.scaledToFit()
+					.foregroundStyle(.primaryC)
 					.frame(height: 25, alignment: .leading)
 					.padding()
-				
 			}
 			.padding(5)
 			
-			Text("Nombre del mueble")
+			Text(muebleInfo.name)
 				.font(.custom("Plus Jakarta Sans Bold", size: 18))
-				.padding(.leading, 20)
+				.padding(.leading, 25)
 				.padding(.bottom, 10)
 			
 			//bottom
 			HStack {
-				StarsView()
-					.padding(.leading, 10)
+				ForEach(0..<muebleInfo.stars) { _ in
+					Image(systemName: "star")
+						.foregroundColor(.yellow)
+				}
+				Text("(\(muebleInfo.resenas))")
+					.font(.caption)
 				Spacer()
-				Text("$000.00")
+				Text("$\(muebleInfo.ventas)")
 					.font(.custom("Plus Jakarta Sans Regular", size: 16))
 			}
-			.padding([.bottom, .leading], 12)
+			.padding([.bottom, .leading], 15)
 		}
 		.background(Color.white)
 		.frame(width: 280, height: 350, alignment: .center)
 		.clipShape(RoundedRectangle(cornerRadius: 25.0))
 		.padding()
 		
-    }
+	}
 }
 
-#Preview {
-    CardView()
-}
+//#Preview {
+//	
+//	let exampleItem = FurnitureData.Item(
+//		id: 1,
+//		name: "Sofá Moderno",
+//		description: "Sofá de tres plazas con diseño moderno y cojines cómodos.",
+//		price: 299.99,
+//		color: "Gris",
+//		size: .grande,
+//		category: FurnitureData.Item.Categories.cocina,
+//		dimensions: FurnitureData.Dimensions(width: "200cm", height: "85cm", depth: "90cm"),
+//		material: "Tela y madera",
+//		ventas: 120
+//	)
+//	
+//	CardView(muebleInfo: exampleItem)
+//	
+//}

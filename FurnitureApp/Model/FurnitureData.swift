@@ -22,7 +22,7 @@ struct FurnitureData: Codable {
 	}
 	
 	// MARK: - Item
-	struct Item: Codable {
+	struct Item: Codable, Identifiable {
 		var id: Int
 		var name, description: String
 		var price: Double
@@ -31,6 +31,9 @@ struct FurnitureData: Codable {
 		var category: Categories
 		var dimensions: Dimensions
 		var material: String
+		var ventas: Int
+		var stars: Int
+		var resenas: Int
 		
 		enum Categories: String, CaseIterable, Codable {
 			case all = "All"

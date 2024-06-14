@@ -17,28 +17,16 @@ struct ContentView: View {
 				
 				HomeView()
 					.tag(0)
-//					.tabItem {
-//						Label("Home", systemImage: "house")
-//					}
 					.toolbar(.hidden, for: .tabBar)
 					
 				FavView()
 					.tag(1)
-//					.tabItem {
-//						Label("Favorite", systemImage: "heart.fill")
-//					}
 					.toolbar(.hidden, for: .tabBar)
 				ShopView()
 					.tag(2)
-//					.tabItem {
-//						Label("Shop", systemImage: "cart")
-//					}
-				
+					.toolbar(.hidden, for: .tabBar)
 				ProfileView()
 					.tag(3)
-//					.tabItem {
-//						Label("Profile", systemImage: "person.circle")
-//					}
 					.toolbar(.hidden, for: .tabBar)
 			}
 			
@@ -60,11 +48,7 @@ struct ContentView: View {
 			.padding(.horizontal, 26)
 		}
 		
-		
-		
 	}
-	
-	
 }
 
 #Preview {

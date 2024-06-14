@@ -14,7 +14,10 @@
 					"height": "85cm",
 					"depth": "90cm"
 				},
-				"material": "Tela y madera"
+				"material": "Tela y madera",
+				"ventas": 800,
+				"stars": 2,
+				"resenas":8765
 			},
 			{
 				"id": 2,
@@ -29,7 +32,10 @@
 					"height": "75cm",
 					"depth": "90cm"
 				},
-				"material": "Madera de roble"
+				"material": "Madera de roble",
+				"ventas": 100,
+				"stars": 5,
+				"resenas":126
 			},
 			{
 				"id": 3,
@@ -44,7 +50,10 @@
 					"height": "120cm",
 					"depth": "70cm"
 				},
-				"material": "Cuero sintético y metal"
+				"material": "Cuero sintético y metal",
+				"ventas": 1800,
+				"stars": 5,
+				"resenas":7543
 			},
 			{
 				"id": 4,
@@ -59,7 +68,10 @@
 					"height": "120cm",
 					"depth": "220cm"
 				},
-				"material": "Madera y tela"
+				"material": "Madera y tela",
+				"ventas": 600,
+				"stars": 3,
+				"resenas":234
 			},
 			{
 				"id": 5,
@@ -74,7 +86,10 @@
 					"height": "180cm",
 					"depth": "30cm"
 				},
-				"material": "Metal y tela"
+				"material": "Metal y tela",
+				"ventas": 1100,
+				"stars": 4,
+				"resenas":9876
 			},
 			{
 				"id": 6,
@@ -89,7 +104,10 @@
 					"height": "180cm",
 					"depth": "30cm"
 				},
-				"material": "Madera y metal"
+				"material": "Madera y metal",
+				"ventas": 200,
+				"stars": 2,
+				"resenas":222
 			},
 			{
 				"id": 7,
@@ -104,7 +122,10 @@
 					"height": "50cm",
 					"depth": "50cm"
 				},
-				"material": "Vidrio y metal"
+				"material": "Vidrio y metal",
+				"ventas": 833,
+				"stars": 3,
+				"resenas":111
 			},
 			{
 				"id": 8,
@@ -119,7 +140,10 @@
 					"height": "90cm",
 					"depth": "55cm"
 				},
-				"material": "Tela y madera"
+				"material": "Tela y madera",
+				"ventas": 1000,
+				"stars": 5,
+				"resenas":6443
 			},
 			{
 				"id": 9,
@@ -134,7 +158,10 @@
 					"height": "75cm",
 					"depth": "70cm"
 				},
-				"material": "Madera y metal"
+				"material": "Madera y metal",
+				"ventas": 620,
+				"stars": 3,
+				"resenas":122
 			},
 			{
 				"id": 10,
@@ -149,7 +176,10 @@
 					"height": "110cm",
 					"depth": "90cm"
 				},
-				"material": "Cuero y metal"
+				"material": "Cuero y metal",
+				"ventas": 1200,
+				"stars": 4,
+				"resenas":7634
 			},
 			{
 				"id": 11,
@@ -164,7 +194,10 @@
 					"height": "45cm",
 					"depth": "60cm"
 				},
-				"material": "Madera y metal"
+				"material": "Madera y metal",
+				"ventas": 800,
+				"stars": 3,
+				"resenas":200
 			},
 			{
 				"id": 12,
@@ -179,7 +212,10 @@
 					"height": "200cm",
 					"depth": "60cm"
 				},
-				"material": "Madera y espejo"
+				"material": "Madera y espejo",
+				"ventas": 900,
+				"stars": 4,
+				"resenas":23
 			},
 			{
 				"id": 13,
@@ -194,7 +230,10 @@
 					"height": "120cm",
 					"depth": "45cm"
 				},
-				"material": "Madera"
+				"material": "Madera",
+				"ventas": 100,
+				"stars": 2,
+				"resenas":1234
 			},
 			{
 				"id": 14,
@@ -209,7 +248,10 @@
 					"height": "100cm",
 					"depth": "40cm"
 				},
-				"material": "Cuero sintético y metal"
+				"material": "Cuero sintético y metal",
+				"ventas": 700,
+				"stars": 3,
+				"resenas":234
 			},
 			{
 				"id": 15,
@@ -224,7 +266,10 @@
 					"height": "120cm",
 					"depth": "3cm"
 				},
-				"material": "Madera y vidrio"
+				"material": "Madera y vidrio",
+				"ventas": 1400,
+				"stars": 5,
+				"resenas":6680
 			}
 		]
 	}

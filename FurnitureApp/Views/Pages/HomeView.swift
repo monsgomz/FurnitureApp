@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct HomeView: View {
+	
 	@Environment(FurnitureModelView.self) var modelData
 	@State var categorySelected: FurnitureData.Item.Categories = .all
 	@State var searchField: String = ""
-    var body: some View {
+	@State var imageMueble: Int = 1
+	
+	var popularFurniture: [FurnitureData.Item] {
+		return modelData.muebles.filter {
+			$0.ventas > 1000
+		}
+	}
+	
+	var bestFurniture: [FurnitureData.Item] {
+		return modelData.muebles.filter {
+			$0.stars >= 4
+		}
+	}
+	
+	var body: some View {
 		NavigationStack {
 			ZStack {
 				Color(.bg)
 				ScrollView {
 					VStack {
-						TopBar()
-						
-						
-						Text("Find the \nBest ")
-							.font(.custom("Plus Jakarta Sans ExtraLight", size: 25))
-							.foregroundStyle(.accent)
-						+ Text("Furniture!")
-							.font(.custom("Plus Jakarta Sans Bold", size: 25))
-							.foregroundStyle(.accent)
-						
+						Title()
 						//MARK: Search + scan
-						
 						Search(searchField: $searchField)
 						
 						//MARK: Menu
@@ -38,16 +43,17 @@ struct HomeView: View {
 							Text("Popular")
 								.font(.custom("Plus Jakarta Sans Bold", size: 21))
 							Spacer()
-							
 						}
 						.padding(.top, 10)
 						
+						//MARK: Popular Card
 						ScrollView(.horizontal){
 							HStack {
-								CardView()
-								CardView()
-								CardView()
-								CardView()
+								ForEach(popularFurniture){ item in
+									
+									CardView(muebleInfo: item)
+									
+								}
 							}
 						}
 						
@@ -58,59 +64,68 @@ struct HomeView: View {
 							
 						}
 						.padding(.top, 10)
+						
+						//MARK: Card Best
 						ScrollView(.horizontal){
 							HStack {
-								CardView()
-								CardView()
-								CardView()
-								CardView()
+								ForEach(bestFurniture){ item in
+									CardView(muebleInfo: item)
+								}
 							}
 						}
-						
-						
 					}
 					.padding()
+					.toolbar {
+						ToolbarItem(placement: .topBarLeading){
+							Image(systemName: "line.3.horizontal.circle")
+								.resizable()
+								.foregroundStyle(.accent)
+								.scaledToFit()
+								.frame(height: 30)
+						}
+						ToolbarItem {
+							Image(systemName: "person.circle")
+								.resizable()
+								.foregroundStyle(.accent)
+								.scaledToFit()
+								.frame(height: 30)
+						}
+						
+					}
+					.toolbarBackground(.bg, for: .navigationBar)
+					.toolbarBackground(.visible, for: .navigationBar)
+					
 				}
-				
 			}
-			.edgesIgnoringSafeArea(.all)
+			.background(ignoresSafeAreaEdges: .all)
 			
 		}
-    }
-}
-
-#Preview {
-    HomeView()
-		.environment(FurnitureModelView())
-}
-
-struct TopBar: View {
-	var body: some View {
-		HStack{
-			Image(systemName: "line.3.horizontal.circle")
-				.resizable()
-				.foregroundStyle(.accent)
-				.scaledToFit()
-				.frame(height: 30)
-			Spacer()
-			Image(systemName: "person.circle")
-				.resizable()
-				.foregroundStyle(.accent)
-				.scaledToFit()
-				.frame(height: 30)
-		}
-		.padding(.horizontal)
 	}
 }
 
+#Preview {
+	HomeView()
+		.environment(FurnitureModelView())
+}
+
 struct Menu: View {
+	@State var menuSelected:FurnitureData.Item.Categories = .all
 	var body: some View {
 		ScrollView(.horizontal) {
-			HStack(spacing: 10){
+			HStack(spacing: 6){
 				ForEach(FurnitureData.Item.Categories.allCases, id: \.self) { item in
-					Text(item.rawValue).tag(item)
+					Text(item.rawValue).tag(item.hashValue)
 						.font(.custom("Plus Jakarta Sans Bold", size: 18))
 						.foregroundStyle(.accent)
+						.padding(4)
+						.background(
+							item == menuSelected ? Color.accentColor.opacity(0.2) : Color.clear
+						)
+						.cornerRadius(8)
+						.onTapGesture {
+							menuSelected = item
+						}
+					
 				}
 			}
 			
@@ -149,3 +164,17 @@ struct Search: View {
 	}
 }
 
+
+struct Title: View {
+	var body: some View {
+		HStack(alignment: .firstTextBaseline){
+			Text("Find the \nBest ")
+				.font(.custom("Plus Jakarta Sans ExtraLight", size: 25))
+				.foregroundStyle(.accent)
+			+ Text("Furniture!")
+				.font(.custom("Plus Jakarta Sans Bold", size: 25))
+				.foregroundStyle(.accent)
+			Spacer()
+		}
+	}
+}
