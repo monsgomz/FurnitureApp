@@ -36,11 +36,10 @@ struct FurnitureDetail: View {
     }
 }
 
-//#Preview {
-//	let exampleItem = FurnitureModelView().muebles
-//	
-//	FurnitureDetail(muebleInfo: exampleItem.first!)
-//}
+#Preview {
+	
+	FurnitureDetail(muebleInfo: FurnitureModelView().muebles.first!)
+}
 
 struct Size: View {
 	var muebleInfo : FurnitureData.Item
@@ -166,6 +165,7 @@ struct Material: View {
 }
 
 struct ColorSection: View {
+	@State var quantityItem: Int = 0
 	var body: some View {
 		HStack {
 			VStack(alignment: .leading){
@@ -187,12 +187,17 @@ struct ColorSection: View {
 			Spacer()
 			
 			VStack(alignment: .leading){
+				Button{
+					quantityItem = quantityItem + 1
+				} label: {
+					Image(systemName: "plus.circle")
+						.foregroundStyle(Color.accent)
+				}
 				Text("Quantity")
 					.font(.custom("Plus Jakarta Sans Bold", size: 16))
 					.padding(.bottom, 5)
 				HStack(alignment: .center, spacing: 8){
-					Image(systemName: "plus.circle")
-						.foregroundStyle(Color.accent)
+					
 					Text("1")
 						.font(.custom("Plus Jakarta Sans Bold", size: 18))
 					Image(systemName: "minus.circle.fill")
