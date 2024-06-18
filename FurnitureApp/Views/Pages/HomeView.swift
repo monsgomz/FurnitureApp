@@ -30,6 +30,7 @@ struct HomeView: View {
 		NavigationStack {
 			ZStack {
 				Color(.bg)
+//					.ignoresSafeArea(.all)
 				ScrollView {
 					VStack {
 						Title()
@@ -51,7 +52,11 @@ struct HomeView: View {
 						ScrollView(.horizontal){
 							HStack {
 								ForEach(popularFurniture){ item in
-									CardView(muebleInfo: item)
+									NavigationLink{
+										FurnitureDetail(muebleInfo: item)
+									} label: {
+										CardView(muebleInfo: item)
+									}
 								}
 							}
 						}
@@ -72,39 +77,17 @@ struct HomeView: View {
 								}
 							}
 						}
-					}
-					.padding()
-					.toolbar {
-						ToolbarItem(placement: .topBarLeading){
-//							Button("Sign In", systemImage: "arrow.up"){
-								NavigationLink {
-									ProfileView()
-								} label: {
-									Image(systemName: "line.3.horizontal.circle")
-																	.resizable()
-																	.foregroundStyle(.accent)
-																	.scaledToFit()
-																	.frame(height: 30)
-								}
-//							}
-								.labelStyle(.iconOnly)
-						}
-						ToolbarItem {
-							NavigationLink {
-								ProfileView()
+			
+						LazyVGrid(columns: [GridItem(.fixed(175)), GridItem(.fixed(175))], spacing: 5) {
+							ForEach(modelData.muebles){ item in
+								SingleCardView(muebleInfo: item)
+
 							}
-						label: {
-							Image(systemName: "person.circle")
-								.resizable()
-								.foregroundStyle(.accent)
-								.scaledToFit()
-								.frame(height: 30)
 						}
-						}
+
 						
 					}
-					.toolbarBackground(.bg, for: .navigationBar)
-					.toolbarBackground(.visible, for: .navigationBar)
+					.padding()
 					
 				}
 			}

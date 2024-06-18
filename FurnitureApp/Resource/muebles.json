@@ -17,7 +17,8 @@
 				"material": "Tela y madera",
 				"ventas": 800,
 				"stars": 2,
-				"resenas":8765
+				"resenas":8765,
+				"favorito": false
 			},
 			{
 				"id": 2,
@@ -35,7 +36,8 @@
 				"material": "Madera de roble",
 				"ventas": 100,
 				"stars": 5,
-				"resenas":126
+				"resenas":126,
+				"favorito": false
 			},
 			{
 				"id": 3,
@@ -53,7 +55,8 @@
 				"material": "Cuero sintético y metal",
 				"ventas": 1800,
 				"stars": 5,
-				"resenas":7543
+				"resenas":7543,
+				"favorito": false
 			},
 			{
 				"id": 4,
@@ -71,7 +74,8 @@
 				"material": "Madera y tela",
 				"ventas": 600,
 				"stars": 3,
-				"resenas":234
+				"resenas":234,
+				"favorito": false
 			},
 			{
 				"id": 5,
@@ -89,7 +93,8 @@
 				"material": "Metal y tela",
 				"ventas": 1100,
 				"stars": 4,
-				"resenas":9876
+				"resenas":9876,
+				"favorito": false
 			},
 			{
 				"id": 6,
@@ -107,7 +112,8 @@
 				"material": "Madera y metal",
 				"ventas": 200,
 				"stars": 2,
-				"resenas":222
+				"resenas":222,
+				"favorito": false
 			},
 			{
 				"id": 7,
@@ -125,7 +131,8 @@
 				"material": "Vidrio y metal",
 				"ventas": 833,
 				"stars": 3,
-				"resenas":111
+				"resenas":111,
+				"favorito": false
 			},
 			{
 				"id": 8,
@@ -143,7 +150,8 @@
 				"material": "Tela y madera",
 				"ventas": 1000,
 				"stars": 5,
-				"resenas":6443
+				"resenas":6443,
+				"favorito": false
 			},
 			{
 				"id": 9,
@@ -161,7 +169,8 @@
 				"material": "Madera y metal",
 				"ventas": 620,
 				"stars": 3,
-				"resenas":122
+				"resenas":122,
+				"favorito": false
 			},
 			{
 				"id": 10,
@@ -179,7 +188,8 @@
 				"material": "Cuero y metal",
 				"ventas": 1200,
 				"stars": 4,
-				"resenas":7634
+				"resenas":7634,
+				"favorito": false
 			},
 			{
 				"id": 11,
@@ -197,7 +207,8 @@
 				"material": "Madera y metal",
 				"ventas": 800,
 				"stars": 3,
-				"resenas":200
+				"resenas":200,
+				"favorito": false
 			},
 			{
 				"id": 12,
@@ -215,7 +226,8 @@
 				"material": "Madera y espejo",
 				"ventas": 900,
 				"stars": 4,
-				"resenas":23
+				"resenas":23,
+				"favorito": false
 			},
 			{
 				"id": 13,
@@ -233,7 +245,8 @@
 				"material": "Madera",
 				"ventas": 100,
 				"stars": 2,
-				"resenas":1234
+				"resenas":1234,
+				"favorito": false
 			},
 			{
 				"id": 14,
@@ -251,7 +264,8 @@
 				"material": "Cuero sintético y metal",
 				"ventas": 700,
 				"stars": 3,
-				"resenas":234
+				"resenas":234,
+				"favorito": false
 			},
 			{
 				"id": 15,
@@ -269,7 +283,8 @@
 				"material": "Madera y vidrio",
 				"ventas": 1400,
 				"stars": 5,
-				"resenas":6680
+				"resenas":6680,
+				"favorito": false
 			}
 		]
 	}

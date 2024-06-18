@@ -34,6 +34,8 @@ struct FurnitureData: Codable {
 		var ventas: Int
 		var stars: Int
 		var resenas: Int
+		var favorito: Bool
+		
 		
 		enum Categories: String, CaseIterable, Codable {
 			case all = "All"

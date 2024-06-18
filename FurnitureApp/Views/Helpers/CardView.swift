@@ -11,6 +11,14 @@ struct CardView: View {
 	var muebleInfo : FurnitureData.Item
 	
 	var imageMueble: Int = Int.random(in: 1...4)
+
+	// MARK: A property wrapper type that supports creating bindings to the mutable properties of observable objects.
+	@Bindable var favoAdd = FurnitureModelView()
+	
+	var furnitureIndex : Int {
+		favoAdd.muebles.firstIndex(where: { $0.id == muebleInfo.id })!
+	}
+	
 	
 	var body: some View {
 		
@@ -28,12 +36,9 @@ struct CardView: View {
 						x: CGFloat(0), y: CGFloat(0))
 					.padding()
 				
-				Image(systemName: "heart")
-					.resizable()
-					.scaledToFit()
-					.foregroundStyle(.primaryC)
-					.frame(height: 25, alignment: .leading)
-					.padding()
+				FavoHeart(favoAdd: $favoAdd.muebles[furnitureIndex].favorito
+				)
+				.padding()
 			}
 			.padding(5)
 			
