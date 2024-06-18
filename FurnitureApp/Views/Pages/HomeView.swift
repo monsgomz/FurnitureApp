@@ -43,6 +43,7 @@ struct HomeView: View {
 							Text("Popular")
 								.font(.custom("Plus Jakarta Sans Bold", size: 21))
 							Spacer()
+//							Text("\(popularFurniture.count)")
 						}
 						.padding(.top, 10)
 						
@@ -50,9 +51,7 @@ struct HomeView: View {
 						ScrollView(.horizontal){
 							HStack {
 								ForEach(popularFurniture){ item in
-									
 									CardView(muebleInfo: item)
-									
 								}
 							}
 						}
@@ -77,18 +76,30 @@ struct HomeView: View {
 					.padding()
 					.toolbar {
 						ToolbarItem(placement: .topBarLeading){
-							Image(systemName: "line.3.horizontal.circle")
-								.resizable()
-								.foregroundStyle(.accent)
-								.scaledToFit()
-								.frame(height: 30)
+//							Button("Sign In", systemImage: "arrow.up"){
+								NavigationLink {
+									ProfileView()
+								} label: {
+									Image(systemName: "line.3.horizontal.circle")
+																	.resizable()
+																	.foregroundStyle(.accent)
+																	.scaledToFit()
+																	.frame(height: 30)
+								}
+//							}
+								.labelStyle(.iconOnly)
 						}
 						ToolbarItem {
+							NavigationLink {
+								ProfileView()
+							}
+						label: {
 							Image(systemName: "person.circle")
 								.resizable()
 								.foregroundStyle(.accent)
 								.scaledToFit()
 								.frame(height: 30)
+						}
 						}
 						
 					}

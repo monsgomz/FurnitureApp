@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FurnitureDetail: View {
+	var muebleInfo : FurnitureData.Item
+	
     var body: some View {
 		VStack {
 			ZStack {
@@ -18,7 +20,7 @@ struct FurnitureDetail: View {
 						.aspectRatio(contentMode: .fill)
 						.ignoresSafeArea()
 					
-					Description()
+					Description(muebleInfo: muebleInfo)
 						.offset(y: -60)
 					
 					BottomPrice()
@@ -34,11 +36,14 @@ struct FurnitureDetail: View {
     }
 }
 
-#Preview {
-    FurnitureDetail()
-}
+//#Preview {
+//	let exampleItem = FurnitureModelView().muebles
+//	
+//	FurnitureDetail(muebleInfo: exampleItem.first!)
+//}
 
 struct Size: View {
+	var muebleInfo : FurnitureData.Item
 	var body: some View {
 		VStack(alignment: .leading){
 			Text("Size")
@@ -46,19 +51,19 @@ struct Size: View {
 				.padding(.bottom, 5)
 			HStack {
 				Text("Width:")
-				Text("123")
+				Text("\(muebleInfo.dimensions.width)")
 			}
 			.font(.custom("Plus Jakarta Sans ", size: 16))
 			.foregroundStyle(Color.gray)
 			HStack {
 				Text("Height:")
-				Text("123")
+				Text("\(muebleInfo.dimensions.height)")
 			}
 			.font(.custom("Plus Jakarta Sans ", size: 16))
 			.foregroundStyle(Color.gray)
 			HStack {
 				Text("Depth:")
-				Text("123")
+				Text("\(muebleInfo.dimensions.depth)")
 			}
 			.font(.custom("Plus Jakarta Sans ", size: 16))
 			.foregroundStyle(Color.gray)
@@ -68,16 +73,19 @@ struct Size: View {
 }
 
 struct Description: View {
+	var muebleInfo : FurnitureData.Item
+	
 	var body: some View {
 		VStack(alignment: .leading){
-			Text("Name")
+			Text(muebleInfo.name)
 				.font(.custom("Plus Jakarta Sans Bold", size: 21))
 			
 			HStack(spacing: 3){
-				StarsView()
-				StarsView()
-				StarsView()
-				Text("(23.9)")
+				ForEach(0..<muebleInfo.stars) { _ in
+					Image(systemName: "star")
+						.foregroundColor(.yellow)
+				}
+				Text("(\(muebleInfo.resenas)")
 					.font(.custom("Plus Jakarta Sans ExtraLight", size: 14))
 				Spacer()
 			}
@@ -92,14 +100,14 @@ struct Description: View {
 			}
 			.padding(.bottom)
 			
-			Text("Sofá de tres plazas con diseño moderno y cojines cómodos.")
+			Text("\(muebleInfo.description)")
 				.frame(height: 60, alignment: .center)
 				.lineLimit(2)
 				.foregroundStyle(Color.gray)
 				.padding(.bottom)
 			
 			HStack{
-				Size()
+				Size(muebleInfo: muebleInfo)
 				Spacer()
 				Material()
 			}
