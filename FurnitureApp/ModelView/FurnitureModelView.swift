@@ -13,11 +13,14 @@ class FurnitureModelView {
 	//MARK: items es un array de elementos de tipo FurnitureData.Item, que representa la lista de muebles cargados
 	var muebles: [FurnitureData.Item] = load("muebles").furnitureStore.items
 	
-	//Diccionario de categorias
+	//Diccionario de elementos por categorias
 	var categories: [String: [FurnitureData.Item]] {
 		Dictionary(grouping: muebles, by: { $0.category.rawValue} //el elemento lee su categoria
 		)
 	}
+	
+	//Diccionario de tienda [Id : Cantidad]
+	var cartList: [FurnitureData.Item: Int] = [:]
 }
 
 func load(_ filename: String) -> FurnitureData {

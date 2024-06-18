@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct FurnitureDetail: View {
-	var muebleInfo : FurnitureData.Item
 	
+	var muebleInfo : FurnitureData.Item
+	@State var quantityItem: Int = 0
+	@Binding var hideTabBar: Bool
+
     var body: some View {
 		VStack {
 			ZStack {
@@ -20,10 +23,10 @@ struct FurnitureDetail: View {
 						.aspectRatio(contentMode: .fill)
 						.ignoresSafeArea()
 					
-					Description(muebleInfo: muebleInfo)
+					Description(muebleInfo: muebleInfo, quantityItem: $quantityItem)
 						.offset(y: -60)
 					
-					BottomPrice()
+					BottomPrice(muebleInfo: muebleInfo, quantityItem: quantityItem)
 						.offset(y: -70)
 				}
 				.ignoresSafeArea(edges: .bottom)
@@ -32,13 +35,20 @@ struct FurnitureDetail: View {
 			}
 
 		}
+		.onAppear {
+			hideTabBar = true // Mostrar la barra de pestañas al entrar en esta vista
+		}
+		.onDisappear{
+			hideTabBar = false
+		}
 		
     }
 }
 
 #Preview {
 	
-	FurnitureDetail(muebleInfo: FurnitureModelView().muebles.first!)
+	FurnitureDetail(muebleInfo: FurnitureModelView().muebles.first!, hideTabBar: .constant(false))
+		.environment(FurnitureModelView())
 }
 
 struct Size: View {
@@ -73,7 +83,7 @@ struct Size: View {
 
 struct Description: View {
 	var muebleInfo : FurnitureData.Item
-	
+	@Binding var quantityItem: Int
 	var body: some View {
 		VStack(alignment: .leading){
 			Text(muebleInfo.name)
@@ -114,7 +124,7 @@ struct Description: View {
 			Divider()
 				.padding()
 			
-			ColorSection()
+			ColorSection(quantityItem: $quantityItem)
 			
 			
 		}
@@ -126,6 +136,10 @@ struct Description: View {
 }
 
 struct BottomPrice: View {
+	//Se agrega un elemento al diccionario de tienda
+	@Environment(FurnitureModelView.self) var modelData
+	var muebleInfo : FurnitureData.Item
+	var quantityItem: Int
 	var body: some View {
 		HStack{
 			Spacer()
@@ -137,6 +151,8 @@ struct BottomPrice: View {
 			Spacer()
 			Button("Add to Cart") {
 				print("add shop")
+				print("Item: \(muebleInfo.name) + \(quantityItem)")
+				modelData.cartList = [muebleInfo: quantityItem]
 			}
 			.foregroundStyle(Color.brown)
 			.padding()
@@ -165,7 +181,7 @@ struct Material: View {
 }
 
 struct ColorSection: View {
-	@State var quantityItem: Int = 0
+	@Binding var quantityItem: Int
 	var body: some View {
 		HStack {
 			VStack(alignment: .leading){
@@ -187,21 +203,25 @@ struct ColorSection: View {
 			Spacer()
 			
 			VStack(alignment: .leading){
-				Button{
-					quantityItem = quantityItem + 1
-				} label: {
-					Image(systemName: "plus.circle")
-						.foregroundStyle(Color.accent)
-				}
+				
 				Text("Quantity")
 					.font(.custom("Plus Jakarta Sans Bold", size: 16))
 					.padding(.bottom, 5)
 				HStack(alignment: .center, spacing: 8){
+					Button{
+						quantityItem = quantityItem <= 0 ? 0 : quantityItem - 1
+					} label: {
+						Image(systemName: "minus.circle")
+							.foregroundStyle(Color.accent)
+					}
+					Text("\(quantityItem)")
+					Button{
+						quantityItem = quantityItem + 1
+					} label: {
+						Image(systemName: "plus.circle.fill")
+							.foregroundStyle(Color.accent)
+					}
 					
-					Text("1")
-						.font(.custom("Plus Jakarta Sans Bold", size: 18))
-					Image(systemName: "minus.circle.fill")
-						.foregroundStyle(Color.accent)
 				}
 			}
 		}

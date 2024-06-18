@@ -13,6 +13,7 @@ struct HomeView: View {
 	@State var categorySelected: FurnitureData.Item.Categories = .all
 	@State var searchField: String = ""
 	@State var imageMueble: Int = 1
+	@Binding var hideTabBar: Bool
 	
 	var popularFurniture: [FurnitureData.Item] {
 		return modelData.muebles.filter {
@@ -53,7 +54,7 @@ struct HomeView: View {
 							HStack {
 								ForEach(popularFurniture){ item in
 									NavigationLink{
-										FurnitureDetail(muebleInfo: item)
+										FurnitureDetail(muebleInfo: item, hideTabBar: $hideTabBar)
 									} label: {
 										CardView(muebleInfo: item)
 									}
@@ -73,15 +74,22 @@ struct HomeView: View {
 						ScrollView(.horizontal){
 							HStack {
 								ForEach(bestFurniture){ item in
-									CardView(muebleInfo: item)
+									NavigationLink{
+										FurnitureDetail(muebleInfo: item, hideTabBar: $hideTabBar)
+									}  label: {
+										CardView(muebleInfo: item)
+									}
 								}
 							}
 						}
 			
 						LazyVGrid(columns: [GridItem(.fixed(175)), GridItem(.fixed(175))], spacing: 5) {
 							ForEach(modelData.muebles){ item in
-								SingleCardView(muebleInfo: item)
-
+								NavigationLink {
+									FurnitureDetail(muebleInfo: item, hideTabBar: $hideTabBar)
+								} label: {
+									SingleCardView(muebleInfo: item)
+								}
 							}
 						}
 
@@ -98,7 +106,7 @@ struct HomeView: View {
 }
 
 #Preview {
-	HomeView()
+	HomeView(hideTabBar: .constant(false))
 		.environment(FurnitureModelView())
 }
 

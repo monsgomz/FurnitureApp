@@ -9,43 +9,53 @@ import SwiftUI
 
 struct ContentView: View {
 	@State var selectedTab = 0
+	@State var hideTabBar = false
+	init() {
+		
+		// when the view is inittialed we need to ensure the main tab view is hidden so only the custom one can be shown
+		
+		UITabBar.appearance().isHidden = true
+	}
 	
 	var body: some View {
 		
 		ZStack(alignment: .bottom){
 			TabView(selection: $selectedTab){
 				
-				HomeView()
+				HomeView(hideTabBar: $hideTabBar)
 					.tag(0)
-					.toolbar(.hidden, for: .tabBar)
+//					.toolbar(.hidden, for: .tabBar)
 					
 				FavView()
 					.tag(1)
-					.toolbar(.hidden, for: .tabBar)
+//					.toolbar(.hidden, for: .tabBar)
 				ShopView()
 					.tag(2)
-					.toolbar(.hidden, for: .tabBar)
+//					.toolbar(.hidden, for: .tabBar)
 				ProfileView()
 					.tag(3)
-					.toolbar(.hidden, for: .tabBar)
+//					.toolbar(.hidden, for: .tabBar)
 			}
 			
-			ZStack{
-				HStack{
-					ForEach((TabbedItems.allCases), id: \.self){ item in
-						Button{
-							selectedTab = item.rawValue
-						} label: {
-							CustomTabItem(imageName: item.iconName, title: item.title, isActive: (selectedTab == item.rawValue))
+			
+			if !hideTabBar  {
+				ZStack{
+					HStack{
+						ForEach((TabbedItems.allCases), id: \.self){ item in
+							Button{
+								selectedTab = item.rawValue
+							} label: {
+								CustomTabItem(imageName: item.iconName, title: item.title, isActive: (selectedTab == item.rawValue))
+							}
 						}
 					}
+					.padding(6)
 				}
-				.padding(6)
-			}
-			.frame(height: 70)
-			.background(.accent.opacity(0.6))
-			.cornerRadius(35)
+				.frame(height: 70)
+				.background(.accent.opacity(0.6))
+				.cornerRadius(35)
 			.padding(.horizontal, 26)
+			}
 		}
 		
 	}

@@ -8,31 +8,38 @@
 import SwiftUI
 
 struct ShopView: View {
+	@Environment(FurnitureModelView.self) var modelData
 	@State var pickerSelection: Int = 1
 	
-    var body: some View {
-		List {
-			Picker(selection: $pickerSelection){
-				Text("Cart")
-					.tag(1)
-				Text("Track")
-					.tag(2)
-			} label: {
-				Label("label", systemImage: "heart")
-			}
-			.pickerStyle(.palette)
-			
-			
-			Row()
-			Row()
-			Row()
-			Row()
+	var body: some View {
+		Picker(selection: $pickerSelection){
+			Text("Cart")
+				.tag(1)
+			Text("Track")
+				.tag(2)
+		} label: {
+			Label("label", systemImage: "heart")
 		}
-    }
+		.pickerStyle(.palette)
+		.padding()
+		
+				List {
+					ForEach(Array(modelData.cartList.keys), id: \.self) { key in
+						if let value = modelData.cartList[key] {
+							HStack {
+								Text("Item: \(key.name)")
+								Spacer()
+								Text("Cantidad: \(value)")
+							}
+						}
+				}
+		    }
+	}
 }
 
 #Preview {
     ShopView()
+		.environment(FurnitureModelView())
 }
 
 struct Row: View {

@@ -22,7 +22,7 @@ struct FurnitureData: Codable {
 	}
 	
 	// MARK: - Item
-	struct Item: Codable, Identifiable {
+	struct Item: Codable, Identifiable, Hashable { 
 		var id: Int
 		var name, description: String
 		var price: Double
@@ -37,7 +37,7 @@ struct FurnitureData: Codable {
 		var favorito: Bool
 		
 		
-		enum Categories: String, CaseIterable, Codable {
+		enum Categories: String, CaseIterable, Codable, Hashable {
 			case all = "All"
 			case sala = "Sala"
 			case comedor = "Comedor"
@@ -48,7 +48,7 @@ struct FurnitureData: Codable {
 			case decoracion = "Decoración"
 		}
 		
-		enum Size: String, Codable {
+		enum Size: String, Codable, Hashable {
 			case grande = "Grande"
 			case mediano = "Mediano"
 			case pequeño = "Pequeño"
@@ -59,7 +59,7 @@ struct FurnitureData: Codable {
 	}
 	
 	// MARK: - Dimensions
-	struct Dimensions: Codable {
+	struct Dimensions: Codable, Hashable {
 		var width, height, depth: String
 	}
 	
