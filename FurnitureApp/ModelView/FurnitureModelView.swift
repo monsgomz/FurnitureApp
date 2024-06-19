@@ -21,7 +21,13 @@ class FurnitureModelView {
 	
 	//Diccionario de tienda [Id : Cantidad]
 	var cartList: [FurnitureData.Item: Int] = [:]
+	
+	var favorites: [FurnitureData.Item] {
+		muebles.filter{$0.favorito}
+	}
 }
+
+//MARK: Leer el JSON
 
 func load(_ filename: String) -> FurnitureData {
 	let data: Data

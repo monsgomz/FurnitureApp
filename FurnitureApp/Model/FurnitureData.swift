@@ -35,6 +35,7 @@ struct FurnitureData: Codable {
 		var stars: Int
 		var resenas: Int
 		var favorito: Bool
+		var image: Int
 		
 		
 		enum Categories: String, CaseIterable, Codable, Hashable {

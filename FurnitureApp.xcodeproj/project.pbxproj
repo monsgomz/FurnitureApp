@@ -28,6 +28,7 @@
 		C25644D32C1B83510099B916 /* FurnitureDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644D22C1B83510099B916 /* FurnitureDetail.swift */; };
 		C25644D52C210D5B0099B916 /* FavoHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644D42C210D5B0099B916 /* FavoHeart.swift */; };
 		C25644D72C21238F0099B916 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644D62C21238F0099B916 /* SingleCardView.swift */; };
+		C25644D92C2228470099B916 /* ShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25644D82C2228470099B916 /* ShopRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		C25644D22C1B83510099B916 /* FurnitureDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureDetail.swift; sourceTree = "<group>"; };
 		C25644D42C210D5B0099B916 /* FavoHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoHeart.swift; sourceTree = "<group>"; };
 		C25644D62C21238F0099B916 /* SingleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		C25644D82C2228470099B916 /* ShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				C25644B62C18F7FA0099B916 /* CardView.swift */,
 				C25644D42C210D5B0099B916 /* FavoHeart.swift */,
 				C25644D62C21238F0099B916 /* SingleCardView.swift */,
+				C25644D82C2228470099B916 /* ShopRow.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				C25644CC2C1A40250099B916 /* ShopView.swift in Sources */,
 				C25644C42C1938F90099B916 /* FurnitureModelView.swift in Sources */,
 				C25644B72C18F7FA0099B916 /* CardView.swift in Sources */,
+				C25644D92C2228470099B916 /* ShopRow.swift in Sources */,
 				C25644D72C21238F0099B916 /* SingleCardView.swift in Sources */,
 				C25644D52C210D5B0099B916 /* FavoHeart.swift in Sources */,
 				C25644C12C1935D10099B916 /* FurnitureData.swift in Sources */,

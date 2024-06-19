@@ -25,8 +25,7 @@ struct ContentView: View {
 				HomeView(hideTabBar: $hideTabBar)
 					.tag(0)
 //					.toolbar(.hidden, for: .tabBar)
-					
-				FavView()
+				FavView(hideTabBar: $hideTabBar)
 					.tag(1)
 //					.toolbar(.hidden, for: .tabBar)
 				ShopView()

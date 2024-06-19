@@ -18,7 +18,8 @@
 				"ventas": 800,
 				"stars": 2,
 				"resenas":8765,
-				"favorito": false
+				"favorito": false,
+				"image": 1
 			},
 			{
 				"id": 2,
@@ -37,7 +38,8 @@
 				"ventas": 100,
 				"stars": 5,
 				"resenas":126,
-				"favorito": false
+				"favorito": false,
+				"image": 2
 			},
 			{
 				"id": 3,
@@ -56,7 +58,8 @@
 				"ventas": 1800,
 				"stars": 5,
 				"resenas":7543,
-				"favorito": false
+				"favorito": false,
+				"image": 2
 			},
 			{
 				"id": 4,
@@ -75,7 +78,8 @@
 				"ventas": 600,
 				"stars": 3,
 				"resenas":234,
-				"favorito": false
+				"favorito": false,
+				"image": 3
 			},
 			{
 				"id": 5,
@@ -94,7 +98,8 @@
 				"ventas": 1100,
 				"stars": 4,
 				"resenas":9876,
-				"favorito": false
+				"favorito": false,
+				"image": 3
 			},
 			{
 				"id": 6,
@@ -113,7 +118,8 @@
 				"ventas": 200,
 				"stars": 2,
 				"resenas":222,
-				"favorito": false
+				"favorito": false,
+				"image": 4
 			},
 			{
 				"id": 7,
@@ -132,7 +138,8 @@
 				"ventas": 833,
 				"stars": 3,
 				"resenas":111,
-				"favorito": false
+				"favorito": false,
+				"image": 4
 			},
 			{
 				"id": 8,
@@ -151,7 +158,8 @@
 				"ventas": 1000,
 				"stars": 5,
 				"resenas":6443,
-				"favorito": false
+				"favorito": false,
+				"image": 1
 			},
 			{
 				"id": 9,
@@ -170,7 +178,8 @@
 				"ventas": 620,
 				"stars": 3,
 				"resenas":122,
-				"favorito": false
+				"favorito": false,
+				"image": 2
 			},
 			{
 				"id": 10,
@@ -189,7 +198,8 @@
 				"ventas": 1200,
 				"stars": 4,
 				"resenas":7634,
-				"favorito": false
+				"favorito": false,
+				"image": 3
 			},
 			{
 				"id": 11,
@@ -208,7 +218,8 @@
 				"ventas": 800,
 				"stars": 3,
 				"resenas":200,
-				"favorito": false
+				"favorito": false,
+				"image": 4
 			},
 			{
 				"id": 12,
@@ -227,7 +238,8 @@
 				"ventas": 900,
 				"stars": 4,
 				"resenas":23,
-				"favorito": false
+				"favorito": false,
+				"image": 1
 			},
 			{
 				"id": 13,
@@ -246,7 +258,8 @@
 				"ventas": 100,
 				"stars": 2,
 				"resenas":1234,
-				"favorito": false
+				"favorito": false,
+				"image": 2
 			},
 			{
 				"id": 14,
@@ -265,7 +278,8 @@
 				"ventas": 700,
 				"stars": 3,
 				"resenas":234,
-				"favorito": false
+				"favorito": false,
+				"image": 3
 			},
 			{
 				"id": 15,
@@ -284,7 +298,8 @@
 				"ventas": 1400,
 				"stars": 5,
 				"resenas":6680,
-				"favorito": false
+				"favorito": false,
+				"image": 4
 			}
 		]
 	}

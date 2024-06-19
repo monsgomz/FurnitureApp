@@ -18,18 +18,19 @@ struct FurnitureDetail: View {
 			ZStack {
 				
 				VStack{
-					Image("mueble1")
+					Image("mueble\(muebleInfo.image)")
 						.resizable()
 						.aspectRatio(contentMode: .fill)
 						.ignoresSafeArea()
+						.frame(height: 300)
 					
 					Description(muebleInfo: muebleInfo, quantityItem: $quantityItem)
 						.offset(y: -60)
 					
 					BottomPrice(muebleInfo: muebleInfo, quantityItem: quantityItem)
-						.offset(y: -70)
+						.offset(y: -80)
 				}
-				.ignoresSafeArea(edges: .bottom)
+//				.ignoresSafeArea(edges: .bottom)
 				
 				
 			}
@@ -152,7 +153,7 @@ struct BottomPrice: View {
 			Button("Add to Cart") {
 				print("add shop")
 				print("Item: \(muebleInfo.name) + \(quantityItem)")
-				modelData.cartList = [muebleInfo: quantityItem]
+				modelData.cartList[muebleInfo] = quantityItem
 			}
 			.foregroundStyle(Color.brown)
 			.padding()

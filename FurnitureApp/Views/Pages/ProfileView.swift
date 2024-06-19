@@ -54,13 +54,12 @@ struct ProfileView: View {
 					} header: {
 						Text("Store")
 					}
-					
+					Spacer()
 					
 				}
-				.navigationTitle("Profile")
 				
-			
 		}
+		.navigationTitle("Profile")
     }
 }
 

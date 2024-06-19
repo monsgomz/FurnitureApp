@@ -31,7 +31,7 @@ struct HomeView: View {
 		NavigationStack {
 			ZStack {
 				Color(.bg)
-//					.ignoresSafeArea(.all)
+					.ignoresSafeArea(.all)
 				ScrollView {
 					VStack {
 						Title()

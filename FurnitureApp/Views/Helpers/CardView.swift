@@ -9,8 +9,6 @@ import SwiftUI
 
 struct CardView: View {
 	var muebleInfo : FurnitureData.Item
-	
-	var imageMueble: Int = Int.random(in: 1...4)
 
 	// MARK: A property wrapper type that supports creating bindings to the mutable properties of observable objects.
 	@Bindable var favoAdd = FurnitureModelView()
@@ -25,7 +23,7 @@ struct CardView: View {
 		VStack(alignment: .leading, spacing: 0) {
 			
 			ZStack (alignment: .topTrailing){
-				Image("mueble\(imageMueble)")
+				Image("mueble\(muebleInfo.image)")
 					.resizable()
 					.scaledToFit()
 					.frame(width:260, height: 240, alignment: .center)
